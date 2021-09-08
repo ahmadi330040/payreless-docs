@@ -10,17 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <ul class="navbarUl">
+      <a class="menu-btn"><li class="fas fa-bars"></li></a>
+      <a class="close-btn"><li class="fas fa-times"></li></a>
+      <li class="navbarLi"><img src="./img/logo.png" alt=""></li>
+      <!-- <li class="navbarLi"><a class="" href="">Payreless</a></li> -->
+    </ul>
 
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
     <div class="side-bar">
-      <div class="close-btn">
-          <i class="fas fa-times"></i>
-      </div>
       <div class="menu">
         <div class="item">
-          <a href="#"><i class="fas fa-desktop"></i>Dashboard</a>
+          <a href="#"><i class="fas fa-arrow-down"></i>Getting Started</a>
         </div>
         <div class="item">
           <a class="sub-btn" href="#"><i class="fas fa-table"></i>Table<i class="fas fa-angle-right dropdown"></i></a>
@@ -47,7 +47,52 @@
       </div>
     </div>
 
+    <div class="docs-content">
+      <div class="container">
+        <article class="docs-article" id="introduction">
+					<header class="docs-header">
+						<h1 class="docs-heading">Introduction</h1>
+						<section class="docs-intro">
+							<p>RadbooX adalah sebuah Applikasi Radius Server untuk pengguna mikrotik yang menerapkan
+								sistem Otentikasi, Otorisasi, dan Akuntansi (AAA) pada jaringan PPPoE dan Hotspot
+								sebagai Network Access.</p>
+							<p>RadbooX selain untuk Radius Server juga dapat digunakan untuk Manajemen Keuangan
+								(Billing).</p>
+						</section>
+						<!--//docs-intro-->
+						<h3>Features</h3>
+						<ul>
+							<li>Terintegrasi dengan MikroTik</li>
+							<li>Radius Server</li>
+							<li>Manajemen User PPPoE Dan Hotspot</li>
+							<li>Manajemen Keuangan (Billing)</li>
+							<li>Laporan Harian Dan Bulanan</li>
+							<li>Generate Tagihan Otomatis oleh Sistem</li>
+							<li>Kirim notifikasi / Pemberitahuan secara otomatis oleh sistem menggunakan WhatsApp</li>
+							<li>Support menggunakan Nomor WhatsApp Pribadi</li>
+							<li>Template Voucher Hotspot</li>
+							<li>Unlimited NAS / Router</li>
+							<li>Unlimited VPN</li>
+							<li>Menyimpan Lokasi pelanggan kedalam Google Map</li>
+							<li>Disable, Enable, Suspend, Disconnect User PPPoE dan Hotspot otomatis oleh sistem juga
+								bisa dilakukan secara manual</li>
+						</ul>
+					</header>
+				</article>
+      </div>
+    </div>
+
     <script type="text/javascript">
+      $(window).resize(function() {
+        if($(window).width() > 800){
+          $('.menu-btn').css('visibility', 'hidden');
+          $('.close-btn').css('visibility', 'hidden');
+        }else {
+          $('.menu-btn').css('visibility', 'visible');
+          $('.close-btn').css('visibility', 'hidden');
+        }
+      });
+
       $(document).ready(function () {
         $('.sub-btn').click(function () {
           $(this).next('.sub-menu').slideToggle();
@@ -57,12 +102,15 @@
         $('.menu-btn').click(function() {
             $('.side-bar').addClass('active');
             $('.menu-btn').css('visibility', 'hidden');
+            $('.close-btn').css('visibility', 'visible');
         });
 
         $('.close-btn').click(function() {
             $('.side-bar').removeClass('active');
             $('.menu-btn').css('visibility', 'visible');
+            $('.close-btn').css('visibility', 'hidden');
         });
+        
       });
     </script>
 

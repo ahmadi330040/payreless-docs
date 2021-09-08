@@ -1,10 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@font-face {
+  font-family: Jost;
+  src: url(./fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: JostItalic;
+  src: url(./fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: JostSemiBold;
+  src: url(./fonts/Jost/static/Jost-SemiBold.ttf);
+}
+@font-face {
+  font-family: JostBold;
+  src: url(./fonts/Jost/static/Jost-Bold.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Jost", sans-serif;
+  font-family: "Jost";
 }
 
 body {
@@ -14,14 +29,71 @@ body {
   background-position: center;
 }
 
+/* Navbar */
+
+.navbarUl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.navbarLi {
+  float: center;
+}
+
+/* .navbarLi a {
+  text-align: center;
+} */
+
+.navbarLi img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14px 16px;
+}
+
+.menu-btn {
+  position: absolute;
+  color: #000;
+  font-size: 20px;
+  left: 0;
+  padding: 20px 16px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  color: #000;
+  font-size: 20px;
+  left: 0;
+  padding: 20px 16px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.navbarLi a:hover:not(.active) {
+  background-color: #fff;
+}
+
+/* End Navbar */
+
+/* Side Bar */
+
 .side-bar {
   background: rgba(225, 225, 225, 0.1);
   backdrop-filter: blur(15px);
   width: 290px;
   height: 100vh;
   position: fixed;
-  top: 0;
-  left: -100%;
+  top: 50px;
   overflow-y: auto;
   transition: 0.6s ease;
   transition-property: left;
@@ -33,7 +105,7 @@ body {
 
 .side-bar .menu {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .side-bar .menu .item {
@@ -42,17 +114,19 @@ body {
 }
 
 .side-bar .menu .item a {
-  color: #000;
+  color: #7f8c8d;
   font-size: 16px;
   text-decoration: none;
   display: block;
-  padding: 5px 30px;
+  padding: 5px 20px;
   line-height: 50px;
+  border-left: 3px solid transparent;
 }
 
 .side-bar .menu .item a:hover {
-  background: #8261f8;
+  color: #8261f8;
   transition: 0.3s ease;
+  border-left-color: #8261f8;
 }
 
 .side-bar .menu .item i {
@@ -72,26 +146,58 @@ body {
 }
 
 .side-bar .menu .item .sub-menu a {
-  padding-left: 80px;
+  margin-left: 60px;
+  line-height: 30px;
 }
 
 .rotate {
   transform: rotate(90deg);
 }
 
-.close-btn {
-  position: absolute;
-  color: #000;
-  font-size: 20px;
-  right: 0;
-  margin: 25px;
-  cursor: pointer;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.menu-btn {
-  position: absolute;
-  color: #000;
-  font-size: 20px;
-  margin: 25px;
-  cursor: pointer;
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-btn {
+    visibility: visible;
+  }
+  .side-bar {
+    left: -100%;
+  }
+  div.docs-content {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 40px;
+    margin-top: 50px;
+  }
+}
+
+/* End Sidebar */
+
+.docs-content {
+  padding-left: 340px;
+  padding-right: 80px;
+  padding-top: 40px;
+  margin-top: 50px;
+}
+
+.docs-content h1 {
+  font-family: "JostBold";
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.docs-content h1 section {
+  color: #7f8c8d;
+  font-size: 300px;
 }
