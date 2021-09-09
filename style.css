@@ -70,7 +70,7 @@ hr {
 
 .menu-btn {
   position: absolute;
-  color: #000;
+  color: #8261f8;
   font-size: 20px;
   left: 0;
   padding: 20px 16px;
@@ -80,7 +80,7 @@ hr {
 
 .close-btn {
   position: absolute;
-  color: #000;
+  color: #8261f8;
   font-size: 20px;
   left: 0;
   padding: 20px 16px;
@@ -98,9 +98,10 @@ hr {
 
 .side-bar {
   background: rgba(225, 225, 225, 0.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(15px);
   width: 290px;
-  height: 100vh;
+  height: 95vh;
   position: fixed;
   top: 50px;
   bottom: 50px;
@@ -142,6 +143,7 @@ hr {
   color: #8261f8;
   transition: 0.3s ease;
   border-left-color: #8261f8;
+  background: #dcd5f8;
 }
 
 .side-bar .menu .item i {
@@ -202,6 +204,9 @@ hr {
     padding-top: 40px;
     margin-top: 50px;
   }
+  footer {
+    margin-left: 0px;
+  }
 }
 
 /* End Sidebar */
@@ -237,7 +242,7 @@ hr {
 }
 
 .docs-header ul {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-bottom: 30px;
 }
 
@@ -286,7 +291,7 @@ section p {
 }
 
 section ul {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-bottom: 30px;
 }
 
@@ -325,20 +330,20 @@ section table tr {
 /* Content */
 
 /* Footer */
-.footer {
-  position: static;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+/* Style the footer */
+footer {
   background-color: #8261f8;
-  color: white;
+  padding: 10px;
   text-align: center;
+  color: white;
   margin-top: 30px;
-  /* z-index: 0; */
+  margin-left: 290px;
+  z-index: 0;
 }
 
-.footer p {
+footer p {
   font-size: 15px;
-  padding: 20px;
+  padding-top: 10px;
 }
+
 /* Footer */
