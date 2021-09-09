@@ -689,7 +689,7 @@
 
           <section class="docs-section" id="pgateway-price">
             <h2 class="section-heading">Price</h2>
-            <div class="table-responsive-sm bg-light rounded my-2">
+            <div class="table-responsive-sm bg-dark rounded my-2">
             <table class="table table-sm table-striped table-light my-1" width="100%">
               <tr>
                 <th>Tipe</th><th>Channel</th><th>Price</th><th>Settlement</th>
@@ -740,6 +740,12 @@
     </footer>
 
     <script type="text/javascript">
+
+      $('.item').on('click','a',function(){
+        $('.side-bar .menu .item a.active, .side-bar .menu .item .sub-menu a.active').removeClass('active');
+        $(this).addClass('active');
+      });
+
       $(window).resize(function() {
         if($(window).width() > 800){
           $('.menu-btn').css('visibility', 'hidden');

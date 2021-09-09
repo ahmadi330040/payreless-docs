@@ -65,7 +65,7 @@ hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 14px 16px;
+  padding: 5px 5px;
 }
 
 .menu-btn {
@@ -73,7 +73,7 @@ hr {
   color: #8261f8;
   font-size: 20px;
   left: 0;
-  padding: 20px 16px;
+  padding: 12px 12px;
   cursor: pointer;
   visibility: hidden;
 }
@@ -83,7 +83,7 @@ hr {
   color: #8261f8;
   font-size: 20px;
   left: 0;
-  padding: 20px 16px;
+  padding: 12px 12px;
   cursor: pointer;
   visibility: hidden;
 }
@@ -97,13 +97,13 @@ hr {
 /* Side Bar */
 
 .side-bar {
-  background: rgba(225, 225, 225, 0.1);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.07);
+  background: rgba(199, 169, 255, 0.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.17);
   backdrop-filter: blur(15px);
-  width: 290px;
-  height: 95vh;
+  width: 250px;
+  height: 97vh;
   position: fixed;
-  top: 50px;
+  top: 20px;
   bottom: 50px;
   overflow-y: auto;
   transition: 0.6s ease;
@@ -131,7 +131,7 @@ hr {
 
 .side-bar .menu .item a {
   color: #7f8c8d;
-  font-size: 16px;
+  font-size: 15px;
   text-decoration: none;
   display: block;
   padding: 5px 20px;
@@ -140,6 +140,13 @@ hr {
 }
 
 .side-bar .menu .item a:hover {
+  color: #8261f8;
+  transition: 0.3s ease;
+  border-left-color: #8261f8;
+  background: #dcd5f8;
+}
+
+.side-bar .menu .item a.active {
   color: #8261f8;
   transition: 0.3s ease;
   border-left-color: #8261f8;
@@ -174,6 +181,12 @@ hr {
   border-left-color: #8261f8;
 }
 
+.side-bar .menu .item .sub-menu a.active {
+  color: #8261f8;
+  transition: 0.3s ease;
+  border-left-color: #8261f8;
+}
+
 .rotate {
   transform: rotate(90deg);
 }
@@ -199,12 +212,12 @@ hr {
     left: -100%;
   }
   div.docs-content {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 40px;
     margin-top: 50px;
   }
-  footer {
+  footer.bottom {
     margin-left: 0px;
   }
 }
@@ -319,7 +332,7 @@ section table th {
   padding: 8px;
   text-align: left;
   background-color: #8261f8;
-  color: white;
+  color: #000000;
 }
 
 section table tr {
@@ -330,14 +343,13 @@ section table tr {
 /* Content */
 
 /* Footer */
-/* Style the footer */
 footer {
   background-color: #8261f8;
   padding: 10px;
   text-align: center;
   color: white;
   margin-top: 30px;
-  margin-left: 290px;
+  margin-left: 250px;
   z-index: 0;
 }
 
